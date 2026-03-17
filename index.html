@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quinto's Quintessential Lawn Care — professional lawn care and landscaping services in NE Philadelphia, Bucks County, and Montgomery County. Free estimates.">
+  <title>Quinto's Quintessential Lawn Care | A Quintessential Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-mark">QQLC</span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="nav__cta">Free Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero__slideshow" id="hero-slideshow">
+      <div class="hero__slide active" style="background-image: url('images/01-front.jpeg')"></div>
+      <div class="hero__slide" style="background-image: url('images/01-main.jpeg')"></div>
+      <div class="hero__slide" style="background-image: url('images/01-corner.jpeg')"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__tag">Est. 2020 &mdash; Southeastern PA</p>
+      <h1 class="hero__title">A Quintessential<br>Experience</h1>
+      <p class="hero__sub">Professional lawn care &amp; landscaping you can trust.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+        <a href="tel:2679451701" class="btn btn--outline">Call 267-945-1701</a>
+      </div>
+    </div>
+    <div class="hero__indicators" id="hero-indicators">
+      <button class="hero__dot active" data-index="0"></button>
+      <button class="hero__dot" data-index="1"></button>
+      <button class="hero__dot" data-index="2"></button>
+    </div>
+  </header>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-bar__item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Licensed &amp; Insured</span>
+      </div>
+      <div class="trust-bar__item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>10+ Years Experience</span>
+      </div>
+      <div class="trust-bar__item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Residential &amp; Commercial</span>
+      </div>
+      <div class="trust-bar__item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>Free Estimates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__image about__image--placeholder">
+        <!-- TODO: Add a photo of Joe or the crew/truck here -->
+      </div>
+      <div class="about__text">
+        <p class="section__label">About Us</p>
+        <h2 class="section__title">Built on Hard Work &amp; Honest Service</h2>
+        <p><strong>Quinto's Quintessential Lawn Care LLC</strong> was founded in 2020 with one clear mission: to provide professional, reliable lawn care and landscaping services our clients can trust.</p>
+        <p>We believe your home or commercial property is a reflection of you, which is why we focus on high-quality workmanship and attention to detail in every landscape we maintain or create.</p>
+        <p>Our owner and founder, <strong>Joe Quinto</strong>, has over 10 years of hands-on experience in the landscaping industry, beginning his career at just 15 years old. His dedication, knowledge, and passion for the trade are reflected in every project we take on.</p>
+        <p>We proudly serve both residential and commercial clients throughout <strong>Southeastern Pennsylvania</strong>, including Northeast Philadelphia, Bucks County, and Montgomery County.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <p class="section__label">What We Do</p>
+      <h2 class="section__title">Our Services</h2>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M4 20V10M20 20V10M8 20v-6h8v6M2 10l10-8 10 8"/></svg>
+          </div>
+          <h3>Weekly Lawn Mowing</h3>
+          <p>Consistent, reliable mowing service to keep your property looking sharp all season long.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z"/><path d="M12 8v4l2 2"/></svg>
+          </div>
+          <h3>Spring &amp; Fall Cleanups</h3>
+          <p>Seasonal prep to clear debris, refresh beds, and get your yard ready for what's next.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+          </div>
+          <h3>Mulch Installation</h3>
+          <p>Quality mulch, professionally spread for a clean, finished look that protects your plants.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Lawn Fertilization</h3>
+          <p>Professional-grade fertilizer applications to promote thick, green, healthy turf.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Aeration &amp; Overseeding</h3>
+          <p>Core aeration and premium seed to revitalize thin or patchy lawns.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>River Rock Installation</h3>
+          <p>Decorative stone work for beds, drainage solutions, and accent features.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3v18M18 3v18M6 12h12M6 6h12M6 18h12"/></svg>
+          </div>
+          <h3>Hedge Trimming</h3>
+          <p>Precise shaping and trimming to keep hedges and shrubs neat and healthy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L2 21l.73-2.64C4.24 13 8 6 17 4V2l5 4-5 4V8z"/></svg>
+          </div>
+          <h3>Leaf Removal</h3>
+          <p>Thorough leaf cleanup to keep your property tidy through fall and winter.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 6v12M2 12h20"/></svg>
+          </div>
+          <h3>Sod Installation</h3>
+          <p>Fresh sod laid right for an instant, lush lawn transformation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <p class="section__label">Our Work</p>
+      <h2 class="section__title">Recent Projects</h2>
+      <div class="gallery__grid">
+        <a href="images/01-front.jpeg" target="_blank" class="gallery__item gallery__item--landscape">
+          <img src="images/01-front.jpeg" alt="Freshly mowed lawn with clean stripes and trimmed hedges" loading="lazy">
+        </a>
+        <a href="images/02-trees.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-trees.jpeg" alt="Tree base with fresh mulch and decorative river rock edging" loading="lazy">
+        </a>
+        <a href="images/01-corner.jpeg" target="_blank" class="gallery__item gallery__item--landscape">
+          <img src="images/01-corner.jpeg" alt="Fresh black mulch installation around flag pole" loading="lazy">
+        </a>
+        <a href="images/02-right-front.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-right-front.jpeg" alt="Mulch beds with river rock border and evergreen shrubs" loading="lazy">
+        </a>
+        <a href="images/01-main.jpeg" target="_blank" class="gallery__item gallery__item--landscape">
+          <img src="images/01-main.jpeg" alt="Wide view of freshly mowed residential lawn with striping" loading="lazy">
+        </a>
+        <a href="images/02-main.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-main.jpeg" alt="Full front yard landscaping with mulch beds and trimmed shrubs" loading="lazy">
+        </a>
+        <a href="images/02-left-front.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-left-front.jpeg" alt="Foundation mulch bed with arborvitae hedge" loading="lazy">
+        </a>
+        <a href="images/02-mailbox.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-mailbox.jpeg" alt="Mulch bed with clean edging around mailbox" loading="lazy">
+        </a>
+        <a href="images/02-side-back.jpeg" target="_blank" class="gallery__item gallery__item--portrait">
+          <img src="images/02-side-back.jpeg" alt="Side yard mulch bed along foundation with hydrangea" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="area section">
+    <div class="container area__inner">
+      <div class="area__text">
+        <p class="section__label">Service Area</p>
+        <h2 class="section__title">Proudly Serving Southeastern PA</h2>
+        <ul class="area__list">
+          <li>Northeast Philadelphia</li>
+          <li>Bucks County</li>
+          <li>Montgomery County</li>
+        </ul>
+        <p class="area__note">Serving both residential and commercial properties.</p>
+      </div>
+      <div class="area__details">
+        <div class="area__detail">
+          <h4>Hours</h4>
+          <p>Monday &ndash; Friday<br>7:00 AM &ndash; 5:00 PM</p>
+        </div>
+        <div class="area__detail">
+          <h4>Response Time</h4>
+          <p>We respond to all inquiries within 24 hours.</p>
+        </div>
+        <div class="area__detail">
+          <h4>Payment</h4>
+          <p>Check, Credit Card, Cash (by arrangement)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote Form -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="section__label">Get Started</p>
+        <h2 class="section__title">Request a Free Quote</h2>
+        <p>Tell us about your project and we'll get back to you within 24 hours with a free, no-obligation estimate.</p>
+        <div class="contact__methods">
+          <a href="tel:2679451701" class="contact__method">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            267-945-1701
+          </a>
+          <a href="mailto:quintoslawncare@gmail.com" class="contact__method">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            quintoslawncare@gmail.com
+          </a>
+        </div>
+      </div>
+      <form class="contact__form" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form__group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form__group">
+            <label for="address">Address / Neighborhood</label>
+            <input type="text" id="address" name="address">
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option>Weekly Lawn Mowing</option>
+            <option>Spring / Fall Cleanup</option>
+            <option>Mulch Installation</option>
+            <option>Lawn Fertilization</option>
+            <option>Aeration &amp; Overseeding</option>
+            <option>River Rock Installation</option>
+            <option>Hedge Trimming</option>
+            <option>Leaf Removal</option>
+            <option>Sod Installation</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="description">Describe Your Project</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="contact-pref">Preferred Contact Method</label>
+            <select id="contact-pref" name="contact_preference">
+              <option value="call">Phone Call</option>
+              <option value="text">Text</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="referral">How Did You Hear About Us?</label>
+            <input type="text" id="referral" name="referral">
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Request Free Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-mark">QQLC</span>
+        <p>Quinto's Quintessential Lawn Care, LLC</p>
+        <p class="footer__copy">&copy; 2020&ndash;2026 All rights reserved.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Free Quote</a>
+      </div>
+      <div class="footer__links">
+        <h4>Service Area</h4>
+        <span>NE Philadelphia</span>
+        <span>Bucks County</span>
+        <span>Montgomery County</span>
+      </div>
+      <div class="footer__links">
+        <h4>Connect</h4>
+        <a href="tel:2679451701">267-945-1701</a>
+        <a href="mailto:quintoslawncare@gmail.com">quintoslawncare@gmail.com</a>
+        <a href="https://www.facebook.com/61576152695023/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
