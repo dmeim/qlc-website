@@ -209,6 +209,10 @@ a {
   color: var(--white) !important;
 }
 
+.nav__close {
+  display: none;
+}
+
 .nav__toggle {
   display: none;
   flex-direction: column;
@@ -781,6 +785,19 @@ a {
     right: 0;
   }
 
+  .nav__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--charcoal);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+  }
+
   .nav__links a {
     color: var(--charcoal) !important;
     font-size: 1.05rem;
@@ -788,6 +805,10 @@ a {
 
   .nav__toggle {
     display: flex;
+  }
+
+  .nav__close {
+    display: block;
   }
 
   .services__grid {
@@ -819,7 +840,8 @@ a {
   .trust-bar__item {
     font-size: 0.78rem;
     flex: 0 0 calc(50% - 1rem);
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .hero__actions {
