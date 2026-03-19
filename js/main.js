@@ -66,6 +66,23 @@ dots.forEach(dot => {
 
 startSlideshow();
 
+// ---- Gallery preview lightbox ----
+var galleryGrid = document.getElementById('gallery-grid');
+if (galleryGrid) {
+  var galleryItems = galleryGrid.querySelectorAll('.gallery__item');
+  var itemList = [];
+  galleryItems.forEach(function (item) {
+    var img = item.querySelector('img');
+    itemList.push({ src: img.src, alt: img.alt, caption: '' });
+  });
+  galleryItems.forEach(function (item, i) {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () {
+      window.lightbox.open(itemList, i);
+    });
+  });
+}
+
 // ---- Smooth scroll for anchor links ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
