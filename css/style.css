@@ -302,6 +302,16 @@ a {
   margin-bottom: 1.25rem;
 }
 
+.hero__tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
 .hero__sub {
   font-size: 1.15rem;
   font-weight: 400;
