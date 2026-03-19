@@ -79,12 +79,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ---- Form submission (basic) ----
-const form = document.getElementById('quote-form');
-form.addEventListener('submit', (e) => {
-  // If no Formspree ID is configured, prevent default and show message
-  if (form.action.includes('YOUR_FORM_ID')) {
-    e.preventDefault();
-    alert('Form backend not yet configured. Please set up Formspree or another form handler.');
-  }
-});
