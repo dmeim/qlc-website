@@ -1,5 +1,5 @@
 ./claude
 ./opencode
-.DS_Store
+**/.DS_Store
 CLAUDE.md
 OPENCODE.md
