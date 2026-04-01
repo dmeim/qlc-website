@@ -1,0 +1,17 @@
+# Cloudflare Pages custom headers
+# No hash-versioned filenames (no build step), so use short max-age with must-revalidate
+
+/css/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/js/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/images/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
