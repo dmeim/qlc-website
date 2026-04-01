@@ -158,17 +158,17 @@ a {
   height: 72px;
 }
 
-.nav__logo-mark {
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--white);
-  transition: color var(--transition);
+.nav__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
-.nav--scrolled .nav__logo-mark {
-  color: var(--green-800);
+.footer__logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .nav__links {
@@ -722,11 +722,6 @@ a {
   gap: 2rem;
 }
 
-.footer__brand .nav__logo-mark {
-  color: var(--white);
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
 
 .footer__brand p {
   font-size: 0.85rem;
