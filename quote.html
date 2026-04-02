@@ -176,7 +176,7 @@
 
         const result = await res.json();
         if (res.ok && result.status === 'good') {
-          form.innerHTML = '<p class="form__success">Thank you for your interest in us! Someone will reach out to you within 24–48 hours. Have a Blessed day :)</p>';
+          form.innerHTML = '<p class="form__success">Thank you for your interest in us! Someone will reach out to you shortly. Have a Blessed day!</p>';
         } else {
           throw new Error('bad status');
         }
