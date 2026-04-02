@@ -156,12 +156,20 @@ a {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  position: relative;
 }
 
 .nav__logo-img {
   height: 48px;
   width: auto;
   display: block;
+}
+
+.nav__flag {
+  font-size: 1.75rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer__logo-img {
@@ -750,6 +758,12 @@ a {
 
 .footer__copy {
   margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.footer__flag {
+  margin-top: 0.25rem;
   font-size: 0.8rem;
   opacity: 0.5;
 }
