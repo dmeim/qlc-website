@@ -156,14 +156,36 @@
       });
     });
 
+    // ---- Phone number formatting ----
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', () => {
+      const digits = phoneInput.value.replace(/\D/g, '').substring(0, 10);
+      let formatted = '';
+      if (digits.length > 0) formatted = '(' + digits.substring(0, 3);
+      if (digits.length >= 3) formatted += ') ' + digits.substring(3, 6);
+      if (digits.length >= 6) formatted += '-' + digits.substring(6);
+      phoneInput.value = formatted;
+    });
+
     // ---- Form submission → n8n webhook ----
     const form = document.getElementById('quote-form');
     const submitBtn = form.querySelector('button[type="submit"]');
+
+    phoneInput.setAttribute('pattern', '\\(\\d{3}\\) \\d{3}-\\d{4}');
+    phoneInput.setAttribute('title', 'Please enter a 10-digit phone number');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const prevError = form.querySelector('.form__error');
       if (prevError) prevError.remove();
+
+      const phoneDigits = phoneInput.value.replace(/\D/g, '');
+      if (phoneDigits.length !== 10) {
+        phoneInput.setCustomValidity('Please enter a full 10-digit phone number.');
+        phoneInput.reportValidity();
+        return;
+      }
+      phoneInput.setCustomValidity('');
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
