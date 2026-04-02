@@ -58,30 +58,30 @@
           </a>
         </div>
       </div>
-      <form class="contact__form" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact__form" id="quote-form">
         <div class="form__row">
           <div class="form__group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required>
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first_name" required>
           </div>
           <div class="form__group">
-            <label for="phone">Phone *</label>
-            <input type="tel" id="phone" name="phone" required>
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last_name" required>
           </div>
         </div>
         <div class="form__row">
           <div class="form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="contact_phone" required placeholder="(215) 555-1234">
           </div>
           <div class="form__group">
-            <label for="address">Address / Neighborhood</label>
-            <input type="text" id="address" name="address">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="contact_email" placeholder="you@example.com">
           </div>
         </div>
         <div class="form__group">
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
+          <label for="service">Service Needed *</label>
+          <select id="service" name="service" required>
             <option value="">Select a service...</option>
             <option>Weekly Lawn Mowing</option>
             <option>Spring / Fall Cleanup</option>
@@ -96,22 +96,8 @@
           </select>
         </div>
         <div class="form__group">
-          <label for="description">Describe Your Project</label>
-          <textarea id="description" name="description" rows="4"></textarea>
-        </div>
-        <div class="form__row">
-          <div class="form__group">
-            <label for="contact-pref">Preferred Contact Method</label>
-            <select id="contact-pref" name="contact_preference">
-              <option value="call">Phone Call</option>
-              <option value="text">Text</option>
-              <option value="email">Email</option>
-            </select>
-          </div>
-          <div class="form__group">
-            <label for="referral">How Did You Hear About Us?</label>
-            <input type="text" id="referral" name="referral">
-          </div>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--full">Request Free Quote</button>
       </form>
@@ -168,12 +154,37 @@
       });
     });
 
-    // ---- Form submission (basic) ----
+    // ---- Form submission → n8n webhook ----
     const form = document.getElementById('quote-form');
-    form.addEventListener('submit', (e) => {
-      if (form.action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        alert('Form backend not yet configured. Please set up Formspree or another form handler.');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const prevError = form.querySelector('.form__error');
+      if (prevError) prevError.remove();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      const data = Object.fromEntries(new FormData(form));
+
+      try {
+        const res = await fetch('https://n8n.mlabz.io/webhook/qqlc/quote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        if (res.ok && result.status === 'good') {
+          form.innerHTML = '<p class="form__success">Thank you for your interest in us! Someone will reach out to you within 24–48 hours. Have a Blessed day :)</p>';
+        } else {
+          throw new Error('bad status');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Free Quote';
+        form.insertAdjacentHTML('afterbegin',
+          '<p class="form__error">Uh oh, something went wrong. Please fill out the form again. Thank you, and sorry for the inconvenience!</p>');
       }
     });
   </script>
